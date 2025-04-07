@@ -1,0 +1,99 @@
+{% extends "base.html" %}  
+
+{% block content %} 
+<h2>Login</h2> 
+<form method="POST">     
+    <div class="form-group">         
+        <label for="username">Username</label>
+        <div class="input-with-hint">
+            <input type="text" id="username" name="username" required>
+            <span class="hint-icon" title="Default: admin" onclick="showHint('username =admin')">?</span>
+            <div id="username-hint" class="hint-popup">Default username: admin</div>
+        </div>
+    </div>     
+    <div class="form-group">         
+        <label for="password">Password</label>
+        <div class="input-with-hint">
+            <input type="password" id="password" name="password" required>
+            <span class="hint-icon" title="Default: 3713" onclick="showHint('Password = 3713')">?</span>
+            <div id="password-hint" class="hint-popup">Default password: 3713</div>
+        </div>
+    </div>     
+    <button type="submit" class="btn2">Login</button> 
+</form>
+
+<style>
+    .form-group {
+        position: relative;
+        margin-bottom: 15px;
+    }
+    
+    .input-with-hint {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hint-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #6c757d;
+        color: white;
+        font-size: 14px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
+    .hint-icon:hover {
+        background-color: #5a6268;
+    }
+    
+    .hint-popup {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 14px;
+        z-index: 1;
+        left: 100%;
+        top: 0;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+</style>
+
+<script>
+    function showHint(hintId) {
+        var hint = document.getElementById(hintId);
+        
+        // Close all hints first
+        var allHints = document.getElementsByClassName('hint-popup');
+        for (var i = 0; i < allHints.length; i++) {
+            allHints[i].style.display = 'none';
+        }
+        
+        // Toggle the clicked hint
+        if (hint.style.display === 'block') {
+            hint.style.display = 'none';
+        } else {
+            hint.style.display = 'block';
+        }
+    }
+    
+    // Close hints when clicking elsewhere
+    document.addEventListener('click', function(event) {
+        if (!event.target.matches('.hint-icon')) {
+            var allHints = document.getElementsByClassName('hint-popup');
+            for (var i = 0; i < allHints.length; i++) {
+                allHints[i].style.display = 'none';
+            }
+        }
+    });
+</script>
+{% endblock %}

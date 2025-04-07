@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Attendance Records by Date</h2>
+    
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5>Recorded Attendance Dates</h5>
+        </div>
+        <div class="card-body">
+            {% if dates %}
+            <table class="table table-striped">
+                <thead>
+                    <tr style="color: #fff;background-color: #333;">
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for date_record in dates %}
+                    <tr style="border: #333;">
+                        <td>{{ date_record.date }}</td>
+                        <td>
+                            <a href="{{ url_for('modify_attendance_date', attendance_date=date_record.date) }}" class="btn btn-warning btn-sm mr-2">
+                                <i class="fas fa-edit"></i> Modify
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            
+            {% else %}
+            <div class="alert alert-info">No attendance records found.</div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="mt-3">
+        <br>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
+        <a href="{{ url_for('take_attendance') }}" class="btn btn-primary">
+            <i class="fas fa-clipboard-list"></i> Take Today's Attendance
+        </a>
+    </div>
+</div>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #242222;
+        border-left: 2px solid #242222;
+        border-right: 2px solid #242222;
+    }
+    th {
+        background-color: #161313;
+        color: white;
+    }
+</style>
+
+{% endblock %}

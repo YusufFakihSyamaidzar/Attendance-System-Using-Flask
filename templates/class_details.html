@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #242222;
+        border-left: 2px solid #242222;
+        border-right: 2px solid #242222;
+    }
+    th {
+        background-color: #161313;
+        color: white;
+    }
+    .btn {
+        background-color: #4CAF50; /* Green */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+<h1>Students List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Registration Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.Reg_no }}</td>
+            <td>
+                <a href="{{ url_for('attendance_report', reg_no=student.Reg_no) }}" class="btn">View Attendance</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

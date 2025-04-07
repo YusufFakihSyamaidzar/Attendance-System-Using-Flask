@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Upload Student CSV</h1>
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Select CSV File</label>
+        <input type="file" id="file" name="file" accept=".csv" required>
+    </div>
+    <button type="submit" class="btn">Upload</button>
+</form>
+<p>
+    <strong>Note:</strong> CSV file should contain student registration numbers in the first column.
+</p>
+{% endblock %}
