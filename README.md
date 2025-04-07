@@ -49,4 +49,4 @@ This is a simple web-based Attendance Management System built with **Flask** and
 ```
 
 ## 🛠 Requirements:
- [requirements.txt](./requirements.txt)
+ [requirements.txt](./requirements.txt.txt)
