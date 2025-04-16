@@ -311,26 +311,29 @@ if __name__ == "__main__":
     # Create a logger with a simpler configuration
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
-    
+
     # Initialize the database
     init_db()
-    
+
     port = 8080
+    url = f"http://localhost:{port}"
+
     def open_browser():
-        time.sleep(2)
-        url = f"http://localhost:{port}"
-        if "WSL2" in platform.uname().release:
-            try:
-                subprocess.run(["open", url])
-            except Exception as e:
-                logger.warning(f"Could not open browser: {e}")
-        else:
-            try:
+        time.sleep(2)  # Give server time to start
+
+        try:
+            system = platform.system()
+            release = platform.uname().release
+
+            # If inside WSL, use powershell.exe to open the browser on Windows side
+            if "microsoft" in release.lower():
+                subprocess.run(["powershell.exe", "Start-Process", url])
+            else:
                 webbrowser.open(url)
-            except Exception as e:
-                logger.warning(f"Could not open browser: {e}")
+        except Exception as e:
+            logger.warning(f"Could not open browser: {e}")
 
     threading.Thread(target=open_browser).start()
-    
-    # Turn off debug mode as it might be causing issues
+
+    # Run the Flask app
     app.run(debug=True, port=port)
