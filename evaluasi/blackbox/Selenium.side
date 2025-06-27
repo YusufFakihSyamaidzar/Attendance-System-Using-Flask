@@ -1,0 +1,186 @@
+{
+  "id": "9dc21637-747e-4f56-9c73-cf2d64b9f904",
+  "version": "2.0",
+  "name": "Selenium",
+  "url": "https://crispy-disco-pjqr45jq9pgfr5-8080.app.github.dev",
+  "tests": [{
+    "id": "270c77a3-c10b-464b-8d5d-2d8fe4651de2",
+    "name": "Selenium",
+    "commands": [{
+      "id": "584dd76c-cfa6-499c-926b-d7bcd43e39da",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f5ec645-4861-4b37-bcb8-1a00aa709709",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x815",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84baa31c-4d5a-485f-a86a-b8ffd18ad3c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f344d49-a3cb-46b8-ab15-2e0e28a47c63",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6cf6ba2-a73d-49fa-9408-c5b5a2183450",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "7623c2a0-2425-47fa-ad44-30a37c1921ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d379dbac-0ab4-4f7b-82e5-c34225c99ce1",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "3713"
+    }, {
+      "id": "4528d74a-2119-4dc5-811f-6d5341bed3b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn2",
+      "targets": [
+        ["css=.btn2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac656e2f-21b9-4e87-baef-f7de654e48bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container",
+      "targets": [
+        ["css=.container", "css:finder"],
+        ["xpath=//div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3925e60-5119-461e-9374-90669f3bee4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Students List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8617fc70-1690-4621-b0dc-382ae3664792",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dashboard",
+      "targets": [
+        ["linkText=Dashboard", "linkText"],
+        ["css=.navbar > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Dashboard')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/dashboard')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dashboard')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "152ff0ee-d796-4141-8a0a-817feb80a1c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Upload Students",
+      "targets": [
+        ["linkText=Upload Students", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Upload Students')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/upload')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Upload Students')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59f046eb-df29-4b0b-bb1d-301d087e7524",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Take Attendance",
+      "targets": [
+        ["linkText=Take Attendance", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Take Attendance')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/take_attendance')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Take Attendance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18acf314-5073-486c-94e2-5914ca0eac38",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .slider",
+      "targets": [
+        ["css=tr:nth-child(1) .slider", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "39db942e-5d08-4a96-93f7-ff999c5fe9c1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["270c77a3-c10b-464b-8d5d-2d8fe4651de2"]
+  }],
+  "urls": ["https://crispy-disco-pjqr45jq9pgfr5-8080.app.github.dev/"],
+  "plugins": []
+}
