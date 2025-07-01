@@ -1,0 +1,19 @@
+MIT License
+MIT License merupakan lisensi yang bersifat permisif dan memberikan kebebasan luas kepada penggunanya.
+Inti dari lisensi ini adalah memberikan kelonggaran tanpa batas bagi pengembang untuk menggunakan, memodifikasi, dan mendistribusikan perangkat lunak.
+Salah satu keunggulannya adalah kompatibilitas dengan software berpemilik tanpa kewajiban membuka kode sumber, menjadikannya pilihan menarik bagi kalangan industri dan komersial karena minimnya beban legal.
+Namun, karena terlalu bebas, lisensi ini tidak mendorong pengguna untuk memberikan kontribusi balik ke komunitas open source, dan dalam beberapa situasi bahkan bisa menghambat keterlibatan komunitas.
+
+GPL (General Public License)
+GPL memiliki pendekatan berbeda karena menerapkan prinsip copyleft yang ketat.
+Fokus utamanya adalah menjaga kebebasan software dan keberlanjutan komunitas dengan memastikan bahwa semua turunan dari perangkat lunak tetap bersifat open source.
+GPL mewajibkan bahwa setiap perubahan kode harus tetap menggunakan lisensi GPL, menjaga keterbukaan di seluruh ekosistem.
+Selain itu, GPL lebih jelas dalam hal perlindungan hak paten, memberikan kepastian hukum yang lebih baik dibanding MIT.
+Namun, karena persyaratan yang ketat ini, penggunaan GPL dalam konteks komersial menjadi lebih terbatas, terutama karena semua turunan harus tetap mematuhi GPL.
+
+Perbandingan
+Perbedaan utama antara MIT dan GPL terletak pada pengelolaan hak cipta dan karya turunan.
+MIT tidak secara eksplisit membahas hak paten, sedangkan GPL menegaskan perlindungan hak paten secara jelas.
+Untuk penggunaan komersial, MIT memberikan keleluasaan penuh, sedangkan GPL membatasi penggunaan agar kontribusi tetap terbuka untuk umum.
+Intinya, GPL berfokus pada perlindungan komunitas dan keberlangsungan open source, sedangkan MIT lebih menekankan kemudahan penggunaan dan fleksibilitas.
+Pemilihan lisensi ini sebaiknya disesuaikan dengan visi dan misi proyek: gunakan MIT untuk mendorong adopsi luas dan masuk ke pasar enterprise, atau pilih GPL untuk menjaga prinsip keterbukaan dan memastikan kontribusi komunitas tetap hidup.
